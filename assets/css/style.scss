@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+*/
+.logo-word-wrapper{
+    font-family: 'Montserrat', sans-serif
+}
+*{
+    font-family: 'Poppins', sans-serif;
+    
+}
+.products-card-all{
+    &:hover{
+        .products-card-hover-wrapper{
+            opacity: 1;
+        }
+    }
+}
