@@ -7,7 +7,7 @@
     <title>Furniro</title>
     <link rel="stylesheet" href="assets/css/style.min.css">
     <script src="assets/js/app.js">
-
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -102,37 +102,7 @@
             </div>
         </div>
     </header>
-    <!--
-<section >
-    <div class="bg-relative relative w-full">
-    <div class="container mx-auto">
-        <div class="grid-rows-1">
-        <div class="grid grid-col-12">
-           
-            <div class="col-span-2 p-5 bg-orange-400"></div>
-            <div class="col-span-2 p-5 bg-orange-400"></div>
-        <div class="col-span-6 flex justify-end h-dvh items-center ">
-            <div class="banner-item-card-wrapper py-12 px-12 bg-[#FFF3E3]  ">
-                <div class="content-wrapper flex flex-col gap-4">
-                    <div class="font-semibold text-sm tracking-widest">New Arrival</div>
-                    <div class="font-bold text-[#B88E2F] text-5xl">Discover Our New Collection</div>
-                    <div class="font-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</div>
-                </div>
-                <div class="banner-btn-wrapper pt-8">
-                    
-                    <a href="#?" class="btn bg-[#B88E2F] py-5 px-14 text-white uppercase inline-block font-bold">buy now</a>
-                </div>
 
-            </div>
-           </div>
-          
-        </div>
-    </div>
-    </div>
-  
-</div>
-</section>
- -->
     <section>
         <div class="bg-relative relative w-full overflow-hidden">
 
@@ -272,7 +242,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="products-card-hover-wrapper transition-all bg-[#00000085] h-full w-full absolute inset-0 flex flex-col justify-center items-center  px-4">
+                            <div class="products-card-hover-wrapper transition-all bg-[#00000085] h-full w-full absolute inset-0 opacity-0 flex flex-col justify-center items-center  px-4">
 
                                 <div class="producsts-hover-btn">
                                     <a href="#?" class="bg-white hover:bg-slate-300 text-[#B88E2F] py-4 px-9 font-semibold">Add to cart</a>
@@ -636,6 +606,139 @@
 
         </div>
     </section>
-</body>
+
+    <section class="bg-[#FCF8F3]">
+        <div class="container mx-auto py-20">
+            <div class="grid-rows-1">
+                <div class="grid grid-cols-12 gap-10">
+                    <div class="col-span-4 flex justify-center">
+                        <div class="slider-section-all-wrapper my-24 flex flex-col justify-center items-center gap-3">
+                            <div class="heading font-bold text-3xl">
+                                50+ Beautiful rooms
+                                inspiration
+                            </div>
+                            <div class="content text-[#616161] text-justify">
+                                Our designer already made a lot of beautiful prototipe of rooms that inspire you
+                            </div>
+                            <a href="" class="btn py-3 px-8 bg-[#B88E2F]  text-white mt-3">
+                                Explore More
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="col-span-8 gap-3  flex">
+                        <div class="slider-card-wrapper relative inline-block col-span-4 bg-blue-50 ">
+                            <div class="img-wrapper">
+                                <img src="assets/img/slider/photo-1.jpg" alt="" class="w-[300px]">
+                            </div>
+                            <div class="content-box-wrapper bg-[white] p-4 absolute bottom-5 left-5 ">
+                                <div class="relative">
+                                    <div class="top-word-wrapper font-medium text-[#616161]">
+                                        <div class="">01 -- Beed Room</div>
+                                    </div>
+                                    <div class="bottom-word-wrapper font-semibold text-xl">
+                                        <div class="">Inner Peace</div>
+                                    </div>
+                                    <div class="arrow-icon bg-[#B88E2F] text-white inline-block px-3 py-2 absolute bottom-[-16px] right-[-56px]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-card-wrapper relative inline-block col-span-4 bg-blue-50 ">
+                            <div class="img-wrapper">
+                                <img src="assets/img/slider/photo-2.jpg" alt="" class="w-[300px]">
+                            </div>
+                            <div class="content-box-wrapper bg-[white] p-4 absolute bottom-5 left-5 ">
+                                <div class="relative">
+                                    <div class="top-word-wrapper font-medium text-[#616161]">
+                                        <div class="">01 -- Beed Room</div>
+                                    </div>
+                                    <div class="bottom-word-wrapper font-semibold text-xl">
+                                        <div class="">Inner Peace</div>
+                                    </div>
+                                    <div class="arrow-icon bg-[#B88E2F] text-white inline-block px-3 py-2 absolute bottom-[-16px] right-[-56px]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-card-wrapper relative inline-block col-span-4 bg-blue-50 ">
+                            <div class="img-wrapper">
+                                <img src="assets/img/slider/photo-1.jpg" alt="" class="w-[300px]">
+                            </div>
+                            <div class="content-box-wrapper bg-[white] p-4 absolute bottom-5 left-5 ">
+                                <div class="relative">
+                                    <div class="top-word-wrapper font-medium text-[#616161]">
+                                        <div class="">01 -- Beed Room</div>
+                                    </div>
+                                    <div class="bottom-word-wrapper font-semibold text-xl">
+                                        <div class="">Inner Peace</div>
+                                    </div>
+                                    <div class="arrow-icon bg-[#B88E2F] text-white inline-block px-3 py-2 absolute bottom-[-16px] right-[-56px]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                     
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section>
+        <div class="bg-[#FCF8F3] mt-14">
+            <div class="gallery-top-info-wrapper flex flex-col items-center justify-center py-16 relative z-50 ">
+                <div class="font-semibold text-sm text-[#616161]">Share your setup with</div>
+                <div class="font-bold text-3xl">#FuniroFurniture</div>
+            </div>
+            <div class="gallery-img-wrapper flex flex-wrap items-start relative justify-center gap-5 mt-5 overflow-hidden max-h-[1000px]">
+                <img src="assets/img/gallery/photo-1.jpg"  class="relative -top-7">
+                <img src="assets/img/gallery/photo-3.jpg" class="relative top-24">
+                <img src="assets/img/gallery/photo-5.jpg" class="relative top-14">
+                <img src="assets/img/gallery/photo-7.jpg" class="relative -top-7">
+                <img src="assets/img/gallery/photo-4.jpg" class="relative  -top-36">
+                
+       
+                <img src="assets/img/gallery/photo-6.jpg"class="relative top-14">
+                <img src="assets/img/gallery/photo-5.jpg" class="relative  top-24 ">
+                <img src="assets/img/gallery/photo-3.jpg">
+                <img src="assets/img/gallery/photo-4.jpg" class="relative  -top-8 ">
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            freeMode: false,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
 
 </html>
