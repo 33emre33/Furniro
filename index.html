@@ -6,85 +6,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Furniro</title>
     <link rel="stylesheet" href="assets/css/style.min.css">
+    <script src="assets/js/app.js">
 
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            clifford: '#da373d',
-          }
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
         }
-      }
-    }
-  </script>
+    </script>
 
 </head>
 
 <body>
-<header>
-    <div class="container mx-auto ">
-    <div class="grid grid-cols-12 grid-rows-1">
-       <div class="col-span-12 md:col-span-4 py-4 md:py-5">
-        <div class="logo-wrapper flex items-end justify-center md:justify-start gap-3">
-            <div class="logo-img-wrapper">
-                <img src="assets/img/logo.svg" alt="Logo" title="Logo">
+    <header>
+        <div class="container mx-auto ">
+            <div class="grid grid-cols-12 grid-rows-1">
+                <div class="col-span-12 md:col-span-4 py-4 md:py-5 flex px-8 md:px-0 items-center justify-between">
+                    <div class="logo-wrapper flex items-end justify-center md:justify-start gap-3">
+                        <div class="logo-img-wrapper">
+                            <img src="assets/img/logo.svg" alt="Logo" title="Logo">
+                        </div>
+                        <div class="logo-word-wrapper">
+                            <span class="font-bold text-2xl">Furniro</span>
+                        </div>
+                    </div>
+                    <button onclick="hamb()" id="hamb-ico1">
+                        <div class="hamb-ico scale-[2.0] md:hidden">
+                            <svg class="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                            </svg>
+                        </div>
+
+                    </button>
+                    <button onclick="hamb1()" class="hidden" id="hamb-ico2">
+                        <div class="close-ico scale-[1.5] ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                            </svg>
+                        </div>
+                    </button>
+
+                </div>
+                <div id="header-list" class="col-span-12 hidden  md:col-span-4 md:flex items-center md:justify-center  flex-wrap py-4 md:py-5 relative">
+                    <div class="header-nav-wrapper font-medium relative">
+                        <nav>
+                            <ul class="md:flex gap-11 ps-10 md:ps-0">
+                                <li class="py-2 md:py-0"><a href="#?">Home</a></li>
+                                <li class="py-2 md:py-0"><a href="#?">Shop</a></li>
+                                <li class="py-2 md:py-0"><a href="#?">About</a></li>
+                                <li class="py-2 md:py-0"><a href="#?">Contact</a></li>
+
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div id="header-ico" class="col-span-12 md:col-span-4 hidden  md:flex items-center justify-center px-10 md:px-0 md:justify-end pe-5 py-4 md:py-5">
+                    <div class="header-icon-wrapper flex justify-between px-[10%] md:gap-7 ">
+                        <div class="person-ico-wrapper">
+                            <a href="#?">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                                    <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="search-ico-wrapper">
+                            <a href="#?">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="like-ico-wrapper">
+                            <a href="#?">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="shoping-ico-wrapper">
+                            <a href="#?">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="logo-word-wrapper">
-                <span class="font-bold text-2xl">Furniro</span>
-            </div>
         </div>
-       </div>
-       <div class="col-span-12  md:col-span-4 flex items-center justify-center flex-wrap py-4 md:py-5">
-        <div class="header-nav-wrapper font-medium">
-            <nav>
-                <ul class="flex gap-11">
-                    <li><a href="#?">Home</a></li>
-                    <li><a href="#?">Shop</a></li>
-                    <li><a href="#?">About</a></li>
-                    <li><a href="#?">Contact</a></li>
-                    
-                </ul>
-            </nav>
-        </div>
-       </div>
-       <div class="col-span-12 md:col-span-4  flex items-center justify-center md:justify-end pe-5 py-4 md:py-5">
-        <div class="header-icon-wrapper flex gap-14">
-            <div class="person-ico-wrapper">
-                <a href="#?">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
-                <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"/>
-              </svg>
-            </a>
-            </div>
-            <div class="search-ico-wrapper">
-                <a href="#?">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-              </svg>
-            </a>
-        </div>
-        <div class="like-ico-wrapper">
-            <a href="#?">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
-              </svg>
-            </a>
-        </div>
-        <div class="shoping-ico-wrapper">
-            <a href="#?">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
-              </svg>
-            </a>
-        </div>
-        </div>
-       </div>
-    </div>
-</div>
-</header>
-<!--
+    </header>
+    <!--
 <section >
     <div class="bg-relative relative w-full">
     <div class="container mx-auto">
@@ -115,276 +133,509 @@
 </div>
 </section>
  -->
- <section>
-    <div class="bg-relative relative w-full overflow-hidden">
+    <section>
+        <div class="bg-relative relative w-full overflow-hidden">
 
-    <div class="container mx-auto">
-        <div class="grid-rows-1">
-            <div class="grid grid-cols-12">
-                <div class="col-span-6 p-5 ">
-                   
-                </div>
-                <div class="col-span-6 flex justify-end h-dvh items-center ">
-                    <div class="banner-item-card-wrapper py-12 px-12 bg-[#FFF3E3]  ">
-                        <div class="content-wrapper flex flex-col gap-4">
-                            <div class="font-semibold text-sm tracking-widest">New Arrival</div>
-                            <div class="font-bold text-[#B88E2F] text-5xl">Discover Our New Collection</div>
-                            <div class="font-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</div>
+            <div class="container mx-auto">
+                <div class="grid-rows-1">
+                    <div class="grid grid-cols-12">
+                        <div class="col-span-6 p-5 ">
+
                         </div>
-                        <div class="banner-btn-wrapper pt-8">
-                            
-                            <a href="#?" class="btn bg-[#B88E2F] py-5 px-14 text-white uppercase inline-block font-bold">buy now</a>
+                        <div class="col-span-6 flex justify-end h-dvh items-center ">
+                            <div class="banner-item-card-wrapper py-12 px-12 bg-[#FFF3E3]  ">
+                                <div class="content-wrapper flex flex-col gap-4">
+                                    <div class="font-semibold text-sm tracking-widest">New Arrival</div>
+                                    <div class="font-bold text-[#B88E2F] text-5xl">Discover Our New Collection</div>
+                                    <div class="font-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</div>
+                                </div>
+                                <div class="banner-btn-wrapper pt-8">
+
+                                    <a href="#?" class="btn bg-[#B88E2F] py-5 px-14 text-white uppercase inline-block font-bold">buy now</a>
+                                </div>
+
+                            </div>
                         </div>
-        
+
                     </div>
-                   </div>
-                  
+                </div>
+            </div>
+            <div class="bg-img-wrapper absolute inset-0 z-[-1] ">
+                <img src="assets/img/banner.png" alt="banner-img " class=" w-full ">
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container mx-auto ">
+            <div class="browse-top-info-wrapper flex flex-col items-center py-16 gap-2">
+                <div class="font-bold text-2xl">Browse The Range</div>
+                <div class="font-light text-gray-600 px-10 text-justify ">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+            </div>
+            <div class="grid-rows-1  px-[8%]">
+                <div class="grid grid-cols-12">
+                    <div class="col-span-4 flex justify-center flex-col items-center gap-6 text-lg">
+                        <img src="assets/img/Browse/photo-1.jpg" class="w-[310px] rounded-lg">
+                        <div class="font-semibold"> Dining</div>
+                    </div>
+                    <div class="col-span-4 flex justify-center flex-col items-center gap-6 text-lg">
+                        <img src="assets/img/Browse/photo-2.jpg" class="w-[310px] rounded-lg">
+                        <div class="font-semibold"> Living</div>
+                    </div>
+                    <div class="col-span-4 flex justify-center flex-col items-center gap-6 text-lg">
+                        <img src="assets/img/Browse/photo-3.jpg" class="w-[310px] rounded-lg">
+                        <div class="font-semibold"> Bedroom</div>
+                    </div>
+
                 </div>
             </div>
         </div>
-        <div class="bg-img-wrapper absolute inset-0 z-[-1] ">
-            <img src="assets/img/banner.png" alt="banner-img " class=" w-full ">
-        </div>
-    </div>
-    </div>
- </section>
+    </section>
 
- <section>
-    <div class="container mx-auto ">
-        <div class="browse-top-info-wrapper flex flex-col items-center py-16 gap-2">
-            <div class="font-bold text-2xl">Browse The Range</div>
-            <div class="font-light text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-        </div>
-        <div class="grid-rows-1  px-[8%]">
-            <div class="grid grid-cols-12">
-                <div class="col-span-4 flex justify-center flex-col items-center gap-6 text-lg">
-                    <img src="assets/img/Browse/photo-1.jpg" class="w-[310px] rounded-lg">
-                    <div class="font-semibold"> Dining</div>
-                </div>
-                <div class="col-span-4 flex justify-center flex-col items-center gap-6 text-lg">
-                    <img src="assets/img/Browse/photo-2.jpg"  class="w-[310px] rounded-lg">
-                    <div class="font-semibold"> Living</div>
-                </div>
-                <div class="col-span-4 flex justify-center flex-col items-center gap-6 text-lg">
-                    <img src="assets/img/Browse/photo-3.jpg"  class="w-[310px] rounded-lg">
-                    <div class="font-semibold"> Bedroom</div>
-                </div>
-
+    <section>
+        <div class="container mx-auto">
+            <div class="products-top-info-wrapper flex justify-center pt-24 pb-8">
+                <div class="font-bold text-2xl">Our Products</div>
             </div>
-        </div>
-    </div>
- </section>
-
- <section>
-    <div class="container mx-auto">
-        <div class="products-top-info-wrapper flex justify-center pt-24 pb-8">
-            <div class="font-bold text-2xl">Our Products</div>
-        </div>
-        <div class="grid-rows-1">
-            <div class="grid grid-cols-12 gap-5">
-                <div class="col-span-12 md:col-span-3">
-                    <div class="products-card-all relative">
-                    <div class="products-card-wrapper bg-[#F4F5F7]">
-                        <div class="products-img-wrapper relative">
-                            <img src="assets/img/products/photo-1.jpg" class="w-full">
-                            <div class="img-top-info-cricle  bg-[#E97171] flex items-center justify-center h-[45px] w-[45px] rounded-full font-medium text-white absolute top-4 right-4 ">
-                                -30%
+            <div class="grid-rows-1">
+                <div class="grid grid-cols-12 gap-5">
+                    <div class="col-span-6 md:col-span-3 flex justify-center">
+                        <div class="products-card-all relative">
+                            <div class="products-card-wrapper bg-[#F4F5F7]">
+                                <div class="products-img-wrapper relative">
+                                    <img src="assets/img/products/photo-1.jpg" class="w-full">
+                                    <div class="img-top-info-cricle  bg-[#E97171] flex items-center justify-center h-[45px] w-[45px] rounded-full font-medium text-white absolute top-4 right-4 ">
+                                        -30%
+                                    </div>
+                                </div>
+                                <div class="products-card-bottom-wrapper p-5 flex flex-col gap-2">
+                                    <div class="font-semibold text-2xl">Syltherine</div>
+                                    <div class="font-semibold text-sm text-[#898989]">Stylish cafe chair</div>
+                                    <div class="price flex gap-5 items-center">
+                                        <div class="new-price font-semibold text-lg">Rp 2.500.000</div>
+                                        <div class="old-price text-xs text-gray-400 line-through">Rp 3.500.000</div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="products-card-bottom-wrapper p-5 flex flex-col gap-2">
-                            <div class="font-semibold text-2xl">Syltherine</div>
-                            <div class="font-semibold text-sm text-[#898989]">Stylish cafe chair</div>
-                            <div class="price flex gap-5 items-center">
-                                <div class="new-price font-semibold text-lg">Rp 2.500.000</div>
-                                <div class="old-price text-xs text-gray-400 line-through">Rp 3.500.000</div>
+                            <div class="products-card-hover-wrapper transition-all bg-[#00000085] h-full w-full absolute inset-0 flex flex-col justify-center items-center opacity-0 px-4">
+
+                                <div class="producsts-hover-btn">
+                                    <a href="#?" class="bg-white hover:bg-slate-300 text-[#B88E2F] py-4 px-9 font-semibold">Add to cart</a>
+                                </div>
+                                <div class="producsts-proporties-wrapper font-semibold flex text-white mt-7 gap-3 flex-wrap justify-center items-center">
+                                    <div class="share-proporties">
+                                        <a href="#?" class=" flex items-center gap-2 hover:bg-[#E97171] transition-all rounded-full p-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
+                                                <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5m-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3" />
+                                            </svg>
+                                            <div class="">Share</div>
+                                        </a>
+                                    </div>
+                                    <div class="compare-proporties flex items-center gap-2">
+                                        <a href="#?" class=" flex items-center gap-2 hover:bg-[#E97171] transition-all rounded-full p-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5" />
+                                            </svg>
+                                            <div class="">Compare</div>
+                                        </a>
+                                    </div>
+                                    <div class="like-proporties flex items-center gap-2">
+                                        <a href="#?" class=" flex items-center gap-2 hover:bg-[#E97171] transition-all rounded-full p-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                            </svg>
+                                            <div class="">Like</div>
+                                        </a>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
-                    <div class="products-card-hover-wrapper transition-all bg-[#00000085] h-full w-full absolute inset-0 flex flex-col justify-center items-center opacity-0">
 
-                        <div class="producsts-hover-btn">
-                           <a href="#?" class="bg-white text-[#B88E2F] py-4 px-9 font-semibold">Add to cart</a>
-                        </div>
-                        <div class="producsts-proporties-wrapper font-semibold flex text-white mt-7 gap-5">
-                            <div class="share-proporties flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
-                                <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5m-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3"/>
-                              </svg>
-                              <div class="">Share</div>
-                            
+                    <div class="col-span-6 md:col-span-3 flex justify-center">
+                        <div class="products-card-all relative">
+                            <div class="products-card-wrapper bg-[#F4F5F7]">
+                                <div class="products-img-wrapper relative">
+                                    <img src="assets/img/products/photo-2.jpg" class="w-full">
+                                    <div class="img-top-info-cricle opacity-0 bg-[#E97171] flex items-center justify-center h-[45px] w-[45px] rounded-full font-medium text-white absolute top-4 right-4 ">
+                                        -30%
+                                    </div>
+                                </div>
+                                <div class="products-card-bottom-wrapper p-5 flex flex-col gap-2">
+                                    <div class="font-semibold text-2xl">Levisosa</div>
+                                    <div class="font-semibold text-sm text-[#898989]">Stylish cafe chair</div>
+                                    <div class="price flex gap-5 items-center">
+                                        <div class="new-price font-semibold text-lg">Rp 2.500.000</div>
+                                        <div class="old-price text-xs text-gray-400 line-through "></div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="compare-proporties flex items-center gap-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5"/>
-                              </svg>
-                              <div class="">Compare</div>
-                            
-                            </div>
-                            <div class="like-proporties flex items-center gap-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
-                                  </svg>
-                              <div class="">Like</div>
-                            
-                            </div>
-                        </div>
+                            <div class="products-card-hover-wrapper transition-all bg-[#00000085] h-full w-full absolute inset-0 flex flex-col justify-center items-center  px-4">
 
-                    </div>
-                </div>
-                </div>
-                <div class="col-span-12 md:col-span-3">
-                    <div class="products-card-all relative">
-                    <div class="products-card-wrapper bg-[#F4F5F7]">
-                        <div class="products-img-wrapper relative">
-                            <img src="assets/img/products/photo-1.jpg" class="w-full">
-                            <div class="img-top-info-cricle  bg-[#E97171] flex items-center justify-center h-[45px] w-[45px] rounded-full font-medium text-white absolute top-4 right-4 ">
-                                -30%
-                            </div>
-                        </div>
-                        <div class="products-card-bottom-wrapper p-5 flex flex-col gap-2">
-                            <div class="font-semibold text-2xl">Syltherine</div>
-                            <div class="font-semibold text-sm text-[#898989]">Stylish cafe chair</div>
-                            <div class="price flex gap-5 items-center">
-                                <div class="new-price font-semibold text-lg">Rp 2.500.000</div>
-                                <div class="old-price text-xs text-gray-400 line-through">Rp 3.500.000</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="products-card-hover-wrapper transition-all bg-[#00000085] h-full w-full absolute inset-0 flex flex-col justify-center items-center opacity-0">
+                                <div class="producsts-hover-btn">
+                                    <a href="#?" class="bg-white hover:bg-slate-300 text-[#B88E2F] py-4 px-9 font-semibold">Add to cart</a>
+                                </div>
+                                <div class="producsts-proporties-wrapper font-semibold flex text-white mt-7 gap-3 flex-wrap justify-center items-center">
+                                    <div class="share-proporties">
+                                        <a href="#?" class=" flex items-center gap-2 hover:bg-[#E97171] transition-all rounded-full p-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
+                                                <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5m-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3" />
+                                            </svg>
+                                            <div class="">Share</div>
+                                        </a>
+                                    </div>
+                                    <div class="compare-proporties flex items-center gap-2">
+                                        <a href="#?" class=" flex items-center gap-2 hover:bg-[#E97171] transition-all rounded-full p-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5" />
+                                            </svg>
+                                            <div class="">Compare</div>
+                                        </a>
+                                    </div>
+                                    <div class="like-proporties flex items-center gap-2">
+                                        <a href="#?" class=" flex items-center gap-2 hover:bg-[#E97171] transition-all rounded-full p-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                            </svg>
+                                            <div class="">Like</div>
+                                        </a>
+                                    </div>
+                                </div>
 
-                        <div class="producsts-hover-btn">
-                           <a href="#?" class="bg-white text-[#B88E2F] py-4 px-9 font-semibold">Add to cart</a>
-                        </div>
-                        <div class="producsts-proporties-wrapper font-semibold flex text-white mt-7 gap-5">
-                            <div class="share-proporties flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
-                                <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5m-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3"/>
-                              </svg>
-                              <div class="">Share</div>
-                            
-                            </div>
-                            <div class="compare-proporties flex items-center gap-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5"/>
-                              </svg>
-                              <div class="">Compare</div>
-                            
-                            </div>
-                            <div class="like-proporties flex items-center gap-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
-                                  </svg>
-                              <div class="">Like</div>
-                            
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                </div>
-                <div class="col-span-12 md:col-span-3">
-                    <div class="products-card-all relative">
-                    <div class="products-card-wrapper bg-[#F4F5F7]">
-                        <div class="products-img-wrapper relative">
-                            <img src="assets/img/products/photo-1.jpg" class="w-full">
-                            <div class="img-top-info-cricle  bg-[#E97171] flex items-center justify-center h-[45px] w-[45px] rounded-full font-medium text-white absolute top-4 right-4 ">
-                                -30%
-                            </div>
-                        </div>
-                        <div class="products-card-bottom-wrapper p-5 flex flex-col gap-2">
-                            <div class="font-semibold text-2xl">Syltherine</div>
-                            <div class="font-semibold text-sm text-[#898989]">Stylish cafe chair</div>
-                            <div class="price flex gap-5 items-center">
-                                <div class="new-price font-semibold text-lg">Rp 2.500.000</div>
-                                <div class="old-price text-xs text-gray-400 line-through">Rp 3.500.000</div>
                             </div>
                         </div>
                     </div>
-                    <div class="products-card-hover-wrapper transition-all bg-[#00000085] h-full w-full absolute inset-0 flex flex-col justify-center items-center opacity-0">
+                    <div class="col-span-6 md:col-span-3 flex justify-center">
+                        <div class="products-card-all relative">
+                            <div class="products-card-wrapper bg-[#F4F5F7]">
+                                <div class="products-img-wrapper relative">
+                                    <img src="assets/img/products/photo-3.jpg" class="w-full">
+                                    <div class="img-top-info-cricle  bg-[#E97171] flex items-center justify-center h-[45px] w-[45px] rounded-full font-medium text-white absolute top-4 right-4 ">
+                                        -50%
+                                    </div>
+                                </div>
+                                <div class="products-card-bottom-wrapper p-5 flex flex-col gap-2">
+                                    <div class="font-semibold text-2xl">Lolita</div>
+                                    <div class="font-semibold text-sm text-[#898989]">Stylish cafe chair</div>
+                                    <div class="price flex gap-5 items-center">
+                                        <div class="new-price font-semibold text-lg">Rp 7.500.000</div>
+                                        <div class="old-price text-xs text-gray-400 line-through">Rp 14.500.000</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="products-card-hover-wrapper transition-all bg-[#00000085] h-full w-full absolute inset-0 flex flex-col justify-center items-center opacity-0 px-4">
 
-                        <div class="producsts-hover-btn">
-                           <a href="#?" class="bg-white text-[#B88E2F] py-4 px-9 font-semibold">Add to cart</a>
-                        </div>
-                        <div class="producsts-proporties-wrapper font-semibold flex text-white mt-7 gap-5">
-                            <div class="share-proporties flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
-                                <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5m-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3"/>
-                              </svg>
-                              <div class="">Share</div>
-                            
-                            </div>
-                            <div class="compare-proporties flex items-center gap-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5"/>
-                              </svg>
-                              <div class="">Compare</div>
-                            
-                            </div>
-                            <div class="like-proporties flex items-center gap-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
-                                  </svg>
-                              <div class="">Like</div>
-                            
-                            </div>
-                        </div>
+                                <div class="producsts-hover-btn">
+                                    <a href="#?" class="bg-white hover:bg-slate-300 text-[#B88E2F] py-4 px-9 font-semibold">Add to cart</a>
+                                </div>
+                                <div class="producsts-proporties-wrapper font-semibold flex text-white mt-7 gap-3 flex-wrap justify-center items-center">
+                                    <div class="share-proporties">
+                                        <a href="#?" class=" flex items-center gap-2 hover:bg-[#E97171] transition-all rounded-full p-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
+                                                <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5m-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3" />
+                                            </svg>
+                                            <div class="">Share</div>
+                                        </a>
+                                    </div>
+                                    <div class="compare-proporties flex items-center gap-2">
+                                        <a href="#?" class=" flex items-center gap-2 hover:bg-[#E97171] transition-all rounded-full p-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5" />
+                                            </svg>
+                                            <div class="">Compare</div>
+                                        </a>
+                                    </div>
+                                    <div class="like-proporties flex items-center gap-2">
+                                        <a href="#?" class=" flex items-center gap-2 hover:bg-[#E97171] transition-all rounded-full p-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                            </svg>
+                                            <div class="">Like</div>
+                                        </a>
+                                    </div>
+                                </div>
 
+                            </div>
+                        </div>
                     </div>
-                </div>
-                </div>
-                <div class="col-span-12 md:col-span-3">
-                    <div class="products-card-all relative">
-                    <div class="products-card-wrapper bg-[#F4F5F7]">
-                        <div class="products-img-wrapper relative">
-                            <img src="assets/img/products/photo-1.jpg" class="w-full">
-                            <div class="img-top-info-cricle  bg-[#E97171] flex items-center justify-center h-[45px] w-[45px] rounded-full font-medium text-white absolute top-4 right-4 ">
-                                -30%
+                    <div class="col-span-6 md:col-span-3 flex justify-center">
+                        <div class="products-card-all relative">
+                            <div class="products-card-wrapper bg-[#F4F5F7]">
+                                <div class="products-img-wrapper relative">
+                                    <img src="assets/img/products/photo-4.jpg" class="w-full">
+                                    <div class="img-top-info-cricle  bg-green-600 flex items-center justify-center h-[45px] w-[45px] rounded-full font-medium text-white absolute top-4 right-4 ">
+                                        New
+                                    </div>
+                                </div>
+                                <div class="products-card-bottom-wrapper p-5 flex flex-col gap-2">
+                                    <div class="font-semibold text-2xl">Respira</div>
+                                    <div class="font-semibold text-sm text-[#898989]">Stylish cafe chair</div>
+                                    <div class="price flex gap-5 items-center">
+                                        <div class="new-price font-semibold text-lg">Rp 2.500.000</div>
+                                        <div class="old-price text-xs text-gray-400 line-through">Rp 3.500.000</div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="products-card-bottom-wrapper p-5 flex flex-col gap-2">
-                            <div class="font-semibold text-2xl">Syltherine</div>
-                            <div class="font-semibold text-sm text-[#898989]">Stylish cafe chair</div>
-                            <div class="price flex gap-5 items-center">
-                                <div class="new-price font-semibold text-lg">Rp 2.500.000</div>
-                                <div class="old-price text-xs text-gray-400 line-through">Rp 3.500.000</div>
+                            <div class="products-card-hover-wrapper transition-all bg-[#00000085] h-full w-full absolute inset-0 flex flex-col justify-center items-center opacity-0 px-4">
+
+                                <div class="producsts-hover-btn">
+                                    <a href="#?" class="bg-white hover:bg-slate-300 text-[#B88E2F] py-4 px-9 font-semibold">Add to cart</a>
+                                </div>
+                                <div class="producsts-proporties-wrapper font-semibold flex text-white mt-7 gap-3 flex-wrap justify-center items-center">
+                                    <div class="share-proporties">
+                                        <a href="#?" class=" flex items-center gap-2 hover:bg-[#E97171] transition-all rounded-full p-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
+                                                <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5m-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3" />
+                                            </svg>
+                                            <div class="">Share</div>
+                                        </a>
+                                    </div>
+                                    <div class="compare-proporties flex items-center gap-2">
+                                        <a href="#?" class=" flex items-center gap-2 hover:bg-[#E97171] transition-all rounded-full p-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5" />
+                                            </svg>
+                                            <div class="">Compare</div>
+                                        </a>
+                                    </div>
+                                    <div class="like-proporties flex items-center gap-2">
+                                        <a href="#?" class=" flex items-center gap-2 hover:bg-[#E97171] transition-all rounded-full p-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                            </svg>
+                                            <div class="">Like</div>
+                                        </a>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
-                    <div class="products-card-hover-wrapper transition-all bg-[#00000085] h-full w-full absolute inset-0 flex flex-col justify-center items-center opacity-0">
 
-                        <div class="producsts-hover-btn">
-                           <a href="#?" class="bg-white text-[#B88E2F] py-4 px-9 font-semibold">Add to cart</a>
-                        </div>
-                        <div class="producsts-proporties-wrapper font-semibold flex text-white mt-7 gap-5">
-                            <div class="share-proporties flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
-                                <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5m-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3"/>
-                              </svg>
-                              <div class="">Share</div>
-                            
+                    <div class="col-span-6 md:col-span-3 flex justify-center">
+                        <div class="products-card-all relative">
+                            <div class="products-card-wrapper bg-[#F4F5F7]">
+                                <div class="products-img-wrapper relative">
+                                    <img src="assets/img/products/photo-5.jpg" class="w-full">
+                                    <div class="img-top-info-cricle  opacity-0 bg-[#E97171] flex items-center justify-center h-[45px] w-[45px] rounded-full font-medium text-white absolute top-4 right-4 ">
+                                        -30%
+                                    </div>
+                                </div>
+                                <div class="products-card-bottom-wrapper p-5 flex flex-col gap-2">
+                                    <div class="font-semibold text-2xl">Grifo</div>
+                                    <div class="font-semibold text-sm text-[#898989]">Night Lamp</div>
+                                    <div class="price flex gap-5 items-center">
+                                        <div class="new-price font-semibold text-lg">Rp 1.500.000</div>
+                                        <div class="old-price text-xs text-gray-400 line-through"></div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="compare-proporties flex items-center gap-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5"/>
-                              </svg>
-                              <div class="">Compare</div>
-                            
-                            </div>
-                            <div class="like-proporties flex items-center gap-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
-                                  </svg>
-                              <div class="">Like</div>
-                            
-                            </div>
-                        </div>
+                            <div class="products-card-hover-wrapper transition-all bg-[#00000085] h-full w-full absolute inset-0 flex flex-col justify-center items-center opacity-0 px-4">
 
+                                <div class="producsts-hover-btn">
+                                    <a href="#?" class="bg-white hover:bg-slate-300 text-[#B88E2F] py-4 px-9 font-semibold">Add to cart</a>
+                                </div>
+                                <div class="producsts-proporties-wrapper font-semibold flex text-white mt-7 gap-3 flex-wrap justify-center items-center">
+                                    <div class="share-proporties">
+                                        <a href="#?" class=" flex items-center gap-2 hover:bg-[#E97171] transition-all rounded-full p-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
+                                                <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5m-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3" />
+                                            </svg>
+                                            <div class="">Share</div>
+                                        </a>
+                                    </div>
+                                    <div class="compare-proporties flex items-center gap-2">
+                                        <a href="#?" class=" flex items-center gap-2 hover:bg-[#E97171] transition-all rounded-full p-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5" />
+                                            </svg>
+                                            <div class="">Compare</div>
+                                        </a>
+                                    </div>
+                                    <div class="like-proporties flex items-center gap-2">
+                                        <a href="#?" class=" flex items-center gap-2 hover:bg-[#E97171] transition-all rounded-full p-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                            </svg>
+                                            <div class="">Like</div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
-                </div>
+
+                    <div class="col-span-6 md:col-span-3 flex justify-center">
+                        <div class="products-card-all relative">
+                            <div class="products-card-wrapper bg-[#F4F5F7]">
+                                <div class="products-img-wrapper relative">
+                                    <img src="assets/img/products/photo-6.jpg" class="w-full">
+                                    <div class="img-top-info-cricle  bg-green-600 flex items-center justify-center h-[45px] w-[45px] rounded-full font-medium text-white absolute top-4 right-4 ">
+                                        New
+                                    </div>
+                                </div>
+                                <div class="products-card-bottom-wrapper p-5 flex flex-col gap-2">
+                                    <div class="font-semibold text-2xl">Mugo</div>
+                                    <div class="font-semibold text-sm text-[#898989]">Small mug</div>
+                                    <div class="price flex gap-5 items-center">
+                                        <div class="new-price font-semibold text-lg">Rp 1.500</div>
+                                        <div class="old-price text-xs text-gray-400 line-through "></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="products-card-hover-wrapper transition-all bg-[#00000085] h-full w-full absolute inset-0 flex flex-col justify-center items-center opacity-0 px-4">
+
+                                <div class="producsts-hover-btn">
+                                    <a href="#?" class="bg-white hover:bg-slate-300 text-[#B88E2F] py-4 px-9 font-semibold">Add to cart</a>
+                                </div>
+                                <div class="producsts-proporties-wrapper font-semibold flex text-white mt-7 gap-3 flex-wrap justify-center items-center">
+                                    <div class="share-proporties">
+                                        <a href="#?" class=" flex items-center gap-2 hover:bg-[#E97171] transition-all rounded-full p-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
+                                                <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5m-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3" />
+                                            </svg>
+                                            <div class="">Share</div>
+                                        </a>
+                                    </div>
+                                    <div class="compare-proporties flex items-center gap-2">
+                                        <a href="#?" class=" flex items-center gap-2 hover:bg-[#E97171] transition-all rounded-full p-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5" />
+                                            </svg>
+                                            <div class="">Compare</div>
+                                        </a>
+                                    </div>
+                                    <div class="like-proporties flex items-center gap-2">
+                                        <a href="#?" class=" flex items-center gap-2 hover:bg-[#E97171] transition-all rounded-full p-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                            </svg>
+                                            <div class="">Like</div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-6 md:col-span-3 flex justify-center">
+                        <div class="products-card-all relative">
+                            <div class="products-card-wrapper bg-[#F4F5F7]">
+                                <div class="products-img-wrapper relative">
+                                    <img src="assets/img/products/photo-7.jpg" class="w-full">
+                                    <div class="img-top-info-cricle  bg-[#E97171] flex items-center justify-center h-[45px] w-[45px] rounded-full font-medium text-white absolute top-4 right-4 ">
+                                        -50%
+                                    </div>
+                                </div>
+                                <div class="products-card-bottom-wrapper p-5 flex flex-col gap-2">
+                                    <div class="font-semibold text-2xl">Pinky</div>
+                                    <div class="font-semibold text-sm text-[#898989]">Cude Bed Set</div>
+                                    <div class="price flex gap-5 items-center">
+                                        <div class="new-price font-semibold text-lg">Rp 7.500.000</div>
+                                        <div class="old-price text-xs text-gray-400 line-through">Rp 14.500.000</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="products-card-hover-wrapper transition-all bg-[#00000085] h-full w-full absolute inset-0 flex flex-col justify-center items-center opacity-0 px-4">
+
+                                <div class="producsts-hover-btn">
+                                    <a href="#?" class="bg-white hover:bg-slate-300 text-[#B88E2F] py-4 px-9 font-semibold">Add to cart</a>
+                                </div>
+                                <div class="producsts-proporties-wrapper font-semibold flex text-white mt-7 gap-3 flex-wrap justify-center items-center">
+                                    <div class="share-proporties">
+                                        <a href="#?" class=" flex items-center gap-2 hover:bg-[#E97171] transition-all rounded-full p-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
+                                                <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5m-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3" />
+                                            </svg>
+                                            <div class="">Share</div>
+                                        </a>
+                                    </div>
+                                    <div class="compare-proporties flex items-center gap-2">
+                                        <a href="#?" class=" flex items-center gap-2 hover:bg-[#E97171] transition-all rounded-full p-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5" />
+                                            </svg>
+                                            <div class="">Compare</div>
+                                        </a>
+                                    </div>
+                                    <div class="like-proporties flex items-center gap-2">
+                                        <a href="#?" class=" flex items-center gap-2 hover:bg-[#E97171] transition-all rounded-full p-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                            </svg>
+                                            <div class="">Like</div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-6 md:col-span-3 flex justify-center">
+                        <div class="products-card-all relative">
+                            <div class="products-card-wrapper bg-[#F4F5F7]">
+                                <div class="products-img-wrapper relative">
+                                    <img src="assets/img/products/photo-8.jpg" class="w-full">
+                                    <div class="img-top-info-cricle  bg-green-600 flex items-center justify-center h-[45px] w-[45px] rounded-full font-medium text-white absolute top-4 right-4 ">
+                                        New
+                                    </div>
+                                </div>
+                                <div class="products-card-bottom-wrapper p-5 flex flex-col gap-2">
+                                    <div class="font-semibold text-2xl">Potty</div>
+                                    <div class="font-semibold text-sm text-[#898989]">Minimalist flower pot</div>
+                                    <div class="price flex gap-5 items-center">
+                                        <div class="new-price font-semibold text-lg">Rp 500.000</div>
+                                        <div class="old-price text-xs text-gray-400 line-through"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="products-card-hover-wrapper transition-all bg-[#00000085] h-full w-full absolute inset-0 flex flex-col justify-center items-center opacity-0 px-4">
+
+                                <div class="producsts-hover-btn">
+                                    <a href="#?" class="bg-white hover:bg-slate-300 text-[#B88E2F] py-4 px-9 font-semibold">Add to cart</a>
+                                </div>
+                                <div class="producsts-proporties-wrapper font-semibold flex text-white mt-7 gap-3 flex-wrap justify-center items-center">
+                                    <div class="share-proporties">
+                                        <a href="#?" class=" flex items-center gap-2 hover:bg-[#E97171] transition-all rounded-full p-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
+                                                <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5m-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3" />
+                                            </svg>
+                                            <div class="">Share</div>
+                                        </a>
+                                    </div>
+                                    <div class="compare-proporties flex items-center gap-2">
+                                        <a href="#?" class=" flex items-center gap-2 hover:bg-[#E97171] transition-all rounded-full p-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5" />
+                                            </svg>
+                                            <div class="">Compare</div>
+                                        </a>
+                                    </div>
+                                    <div class="like-proporties flex items-center gap-2">
+                                        <a href="#?" class=" flex items-center gap-2 hover:bg-[#E97171] transition-all rounded-full p-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                            </svg>
+                                            <div class="">Like</div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <div class="products-bottom-btn-wrapper flex justify-center py-20">
+                <a href="#?" class="font-semibold text-xl bg-white border-solid border-[1px] border-[#B88E2F] text-[#B88E2F] px-14 py-3 hover:bg-[#B88E2F] transition-all hover:text-[white]">Show More</a>
+            </div>
+
         </div>
-
-
-        
-    </div>
- </section>
+    </section>
 </body>
 
 </html>
